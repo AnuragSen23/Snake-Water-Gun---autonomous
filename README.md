@@ -1,4 +1,4 @@
-# Snake-Water-Gun---autonomous
+# Snake-Water-Gun-autonomous
 
 This is a python based "Snake-Water-Gun" game program. The inbuilt Random module made this game possible. The coalescence of Speech Recognition, Code Algorithm and Text to Speech converter makes this program fully autonomous.
 
