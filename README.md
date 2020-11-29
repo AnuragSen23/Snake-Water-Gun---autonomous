@@ -4,6 +4,12 @@ This is a python based "Snake-Water-Gun" game program. The inbuilt Random module
 
 The following python modules were employed-
 • speech_recognition 
+
+
 • PyAudio
+
+
 • pyttsx3 (python text to speech)
+
+
 • random
