@@ -1,4 +1,3 @@
-import speech_recognition as sr
 import pyttsx3 as speak
 import random
 
@@ -12,65 +11,78 @@ Gwen.setProperty("voice",voices[1].id)
 Gwen.setProperty("volume",1)
 Gwen.setProperty("rate",200)
 
+Gwen.say("How Many times you want to play this game?")
+Gwen.runAndWait()
+N = input("Enter your number of chances: ")
+
+
 Gwen.say("Okay Lets Play. Choose Snake, Water or Gun")
 Gwen.runAndWait()
 
-print("Give your choice: ")
-r = sr.Recognizer()
-with sr.Microphone() as source:
-    audio = r.record(source, duration=5)
-    player = r.recognize_google(audio)
-    
+a=0
+b=0
+c=0
+for i in range(int(N)):
+
+    player = input("Enter your Choice: ")
+
+   
     trials = ["snake","water","gun"]
     Computer = random.choice(trials)
-    
+
+    Gwen.say("Computer chose " + Computer)
+    Gwen.runAndWait()
+
+    a = "This is a Draw"
+    b = "Computer Wins"
+    c = "You Win"
+
+try:
     if Computer == "snake":
         if player == "snake":
-            print("That is a DRAW!")
-            Gwen.say("This is a Draw")
+            print(a)
+            Gwen.say(a)
             Gwen.runAndWait()
-        
+            
         if player == "water":
-            print("COMPUTER WINS!")
-            Gwen.say("Computer Wins")
+            print(b)
+            Gwen.say(b)
+            Gwen.runAndWait()
+            
+        if player == "gun":
+            print(c)
+            Gwen.say(c)
+            Gwen.runAndWait()
+                    
+    elif Computer == "water":
+        if player == "water":
+            print(a)
+            Gwen.say(a)
             Gwen.runAndWait()
         
         if player == "gun":
-            print("YOU WIN!")
-            Gwen.say("You Win")
-            Gwen.runAndWait()
-    
-    if Computer == "water":
-        
-        if player == "water":
-            print("That is a DRAW!")
-            Gwen.say("This is a Draw")
-            Gwen.runAndWait()
-        
-        if player == "gun":
-            print("COMPUTER WINS!")
-            Gwen.say("Computer Wins")
+            print(b)
+            Gwen.say(b)
             Gwen.runAndWait()
         
         if player == "snake":
-            print("YOU WIN!")
-            Gwen.say("You Win")
+            print(c)
+            Gwen.say(c)
             Gwen.runAndWait()
     
-    if Computer == "gun":
+    else:
         
         if player == "gun":
-            print("That is a DRAW!")
-            Gwen.say("This is a Draw")
+            print(a)
+            Gwen.say(a)
             Gwen.runAndWait()
         
         if player == "snake":
-            print("COMPUTER WINS!")
-            Gwen.say("Computer Wins")
+            print(b)
+            Gwen.say(b)
             Gwen.runAndWait()
         
         if player == "water":
-            print("YOU WIN!")
-            Gwen.say("You Win")
+            print(c)
+            Gwen.say(c)
             Gwen.runAndWait()
-    
