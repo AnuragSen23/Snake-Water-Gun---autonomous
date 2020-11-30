@@ -37,7 +37,7 @@ for i in range(int(N)):
     b = "Computer Wins"
     c = "You Win"
 
-try:
+
     if Computer == "snake":
         if player == "snake":
             print(a)
